@@ -1,7 +1,23 @@
 {
+  "name": "interactive_cs",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
+    "@vitejs/plugin-react": "^4.3.2",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
-    "styled-components": "^6.1.13"
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.13",
+    "vite": "^5.4.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
   }
 }

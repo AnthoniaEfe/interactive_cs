@@ -4,7 +4,8 @@ import Card from "./components/Card"
 
 function App() {
   return (
-    <div>
+    <div className="w-screen h-screen overflow-y-auto overflow-x-hidden relative  
+    flex items-center justify-center p-8 mx-0 my-auto">
     {/* <Comments/> */}
     <Card/>
     </div> 

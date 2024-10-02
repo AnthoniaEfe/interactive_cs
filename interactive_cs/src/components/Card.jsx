@@ -12,8 +12,8 @@ const CardContainer = styled.div`
   height: auto;
   margin: 1rem auto;
   border: 1px solid #fff;
-  border-radius: 16px;
-  padding: 12px;
+  border-radius: 18px;
+  padding: 16px;
 
 `;
 
@@ -24,29 +24,45 @@ const CardCounter = styled.div`
   justify-content: center;
   align-self: center;
   height: 80%;
+  padding: 10px 16px;
   background-color: hsl(239, 57%, 85%);
   border: 1px solid #fff;
-  border-radius: 16px;
+  border-radius: 14px;
 `
 
 const CardBody = styled.div`
-  .card-header{
+  div{
     display:flex;
     flex-direction: row;
     align-items: center;
-  }
+    justify-content: space-between;
+    gap: 20px;
   
-  .left{
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    width: auto;
-    gap: 30px;
+  
+    div{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: left;
+      width: auto;
+      gap: 15px;
+
+      img{
+        width: 24px;
+        height: 24px;
+      }
+
+      p{
+        color: #000;
+        font-size: 14px;
+      }
   }
+}
 `  
 
 const CardComment = styled.div`
   width: 100%;
+  color: #000;
 `
 
 export default function Card() {
@@ -59,11 +75,11 @@ const toggleDropdown = () => {
   return (
     <CardContainer>
       <CardCounter>
-        <button style={{padding: "10px",
+        <button style={{padding: "0px",
         backgroundColor: "hsl(239, 57%, 85%)"
         }}>+</button>
         <p>6</p>
-        <button style={{padding: "10px",
+        <button style={{padding: "0px",
         backgroundColor: "hsl(239, 57%, 85%)"
         }}>-</button>
 
@@ -72,19 +88,19 @@ const toggleDropdown = () => {
 
       <CardBody>
       <div className="card-header">
-        <div>
-          <img src={avatar} alt="" className="avatar"/>
-          <p style={{width: "20px",
-          height:"20px",
-          color: "#000",
-        }}>1 month ago</p>
+        <div className="left">
+          <img src={avatar} alt=""/>
+          <p>amyrobson</p>
+          <p>1 month ago</p>
       </div>
 
-      <a href="#" onClick={toggleDropdown} className="dropdown-trigger" style={{width: "20px",
-          height:"20px"
+      <a href="#" onClick={toggleDropdown} className="dropdown-trigger"
+       style={{ display: "inlineFlex", 
+        alignItems: "flexEnd", 
+        justifyContent: "right"
         }}>
       <img src={iconReply2} alt="" className="avatar"/>
-        <span className="reply">Reply</span>
+        <span className="reply" style={{marginLeft: "6px"}}>Reply</span>
       </a>
       </div>
 
